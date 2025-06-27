@@ -1,9 +1,11 @@
 // Import dependencies
 const express = require('express');
 const logging = require('./logging')
+
+// Invoke Express.js 
 const app = express();
 
-// Middleware to parse JSON
+// Middleware to parse JSON - Converting JSON to JS object to make it redable and can perfomr operation on that data
 app.use(express.json());
 
 // 🔹 Logging Middleware
@@ -14,6 +16,8 @@ let books = [
   { id: 1, title: "The Alchemist", author: "Paulo Coelho" },
   { id: 2, title: "Atomic Habits", author: "James Clear" }
 ];
+
+// API's to perform CRUD Operation on Local Book Storage
 
 // 🔹 GET all books
 app.get('/books', (req, res) => {

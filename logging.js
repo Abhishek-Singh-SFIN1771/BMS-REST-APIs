@@ -1,3 +1,5 @@
+// Logging middelware for our bms.
+
 const logging = (req , res , next) => 
     {
         console.log(req.method);
