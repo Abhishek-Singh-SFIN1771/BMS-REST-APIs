@@ -2,7 +2,7 @@
   "name": "bms-rest-apis",
   "version": "1.0.0",
   "description": "",
-  "main": "BMS-API.js",
+  "main": "bms-apis.js",
   "scripts": {
     "start": "nodemon app.js"
   },
