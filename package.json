@@ -1,18 +1,38 @@
 {
-  "name": "bms-rest-api",
+  "name": "book-management-system",
   "version": "1.0.0",
-  "description": "",
-  "main": "bms-api.js",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node dist/book-server.js",
+    "dev": "ts-node-dev src/book-server.ts",
+    "build": "tsc"
   },
   "dependencies": {
-    "express": "^4.21.2"
+    "bcrypt": "^6.0.0",
+    "express": "^4.21.2",
+    "pg": "^8.16.3",
+    "pg-hstore": "^2.3.4",
+    "reflect-metadata": "^0.2.2",
+    "routing-controllers": "^0.11.2",
+    "sequelize": "^6.37.7",
+    "sequelize-typescript": "^2.1.6",
+    "typedi": "^0.10.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
-  }
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abhishek-Singh-SFIN1771/BMS-REST-APIs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Abhishek-Singh-SFIN1771/BMS-REST-APIs/issues"
+  },
+  "homepage": "https://github.com/Abhishek-Singh-SFIN1771/BMS-REST-APIs#readme",
+  "description": ""
 }
