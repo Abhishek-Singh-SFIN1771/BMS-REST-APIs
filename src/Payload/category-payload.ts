@@ -1,5 +1,5 @@
 export class CategoryDto 
 {
-    categoryId!: number;
+    categoryId!: string;
     categoryName!: string; 
 }

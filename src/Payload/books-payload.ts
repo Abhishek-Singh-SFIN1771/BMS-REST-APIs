@@ -3,25 +3,25 @@ import { CategoryDto } from "./category-payload";
 
 export class BookDto 
 {
-    bookId?: number
-    bookTitle!: string;
-    bookIsbn!: number;
-    publishYear!: number;
-    authorName!: string;
-    categoryName!:string;
+    private bookId?: string
+    private bookTitle!: string;
+    private bookIsbn!: number;
+    private publishYear!: number;
+    private authorName!: string;
+    private categoryName!:string;
 
-    author?: AuhtorDto ;
-    category?: CategoryDto;
+    private author?: AuhtorDto ;
+    private category?: CategoryDto;
 
     // --- Getters/Setters
 
     //BookId Getters/Setters
-    public getBookId(): number | undefined
+    public getBookId(): string | undefined
     {
         return this.bookId;
     }
 
-    public setBookId(value: number) : void
+    public setBookId(value: string) : void
     {
         this.bookId = value;
     }

@@ -1,4 +1,4 @@
-import { Table, Column, Model, ForeignKey, BelongsTo, DataType, PrimaryKey, AutoIncrement } from 'sequelize-typescript';
+import { Table, Column, Model, ForeignKey, BelongsTo, DataType, PrimaryKey,  Default } from 'sequelize-typescript';
 import { Author } from "./author-entity";
 import { Category } from "./category-entity";
 
@@ -8,29 +8,29 @@ export class Books extends Model<Books>
 {
 
 @PrimaryKey
-  @AutoIncrement
+  @Default(DataType.UUIDV4) // Automatically generates a UUID
   @Column({ field: 'book_id' })
-  bookId!: number;
+  id!: string;
 
   @Column({ type: DataType.STRING, allowNull: false })
-  bookTitle!: string;
+  title!: string;
 
   @Column({ field: 'book_isbn', type: DataType.INTEGER, allowNull: false })
-  bookIsbn!: number;
+  isbn!: number;
 
   @Column({ field: 'publish_year', type: DataType.INTEGER, allowNull: false })
   publishYear!: number;
 
   @ForeignKey(() => Author)
   @Column({ field: 'author_id' })
-  authorId!: number;
+  authorId!: string;
 
   @BelongsTo(() => Author)
   author!: Author;
 
   @ForeignKey(() => Category)
   @Column({ field: 'category_id' })
-  categoryId!: number;
+  categoryId!: string;
 
   @BelongsTo(() => Category)
   category!: Category;

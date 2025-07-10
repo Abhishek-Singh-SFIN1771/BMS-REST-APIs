@@ -1,5 +1,5 @@
 export class AuhtorDto 
 {
-    authorId!: number;
+    authorId!: string;
     authorName!: string; 
 }

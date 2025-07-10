@@ -2,8 +2,7 @@ import { Body, Delete, Get, HttpCode, JsonController, Param, Post, Put } from "r
 import { BookService } from "../Service/book-service";
 import { BookDto } from "../Payload/books-payload";
 import { Service } from "typedi";
-import { CustomError } from "../Custom-Errors/custom-erros";
-// import { CustomError } from "../Custom-Errors/custom-erros";
+
 
 @Service()
 @JsonController('/api/v1/bms')

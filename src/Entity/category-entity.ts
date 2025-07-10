@@ -1,4 +1,4 @@
-import { AutoIncrement, PrimaryKey } from "sequelize-typescript";
+import { Default, PrimaryKey } from "sequelize-typescript";
 import { Books } from "./book-entity";
 import { Table, Column, Model, HasMany, DataType } from 'sequelize-typescript';
 
@@ -6,9 +6,9 @@ import { Table, Column, Model, HasMany, DataType } from 'sequelize-typescript';
 export class Category extends Model<Category> 
 {
     @PrimaryKey
-    @AutoIncrement
+    @Default(DataType.UUIDV4) // Automatically generates a UUID
     @Column({field: 'category_id',})
-    categoryId!: number;
+    categoryId!: string;
 
     @Column({field: 'category_name', type:DataType.STRING, allowNull: false})
     categoryName!: string;
