@@ -18,7 +18,7 @@ export class BookService
 
     async createBook(bookDto: BookDto) : Promise<BookDto>
     {
-        const existingBook = await this.bookRepo.findById(bookDto.getBookIsbn());
+        const existingBook = await this.bookRepo.findById(bookDto.bookIsbn);
         if(existingBook)
             {
                 throw new CustomError('📚 Book already exists', 409);

@@ -7,8 +7,8 @@ export class Category extends Model<Category>
 {
     @PrimaryKey
     @Default(DataType.UUIDV4) // Automatically generates a UUID
-    @Column({field: 'category_id',})
-    categoryId!: string;
+    @Column({field: 'id',})
+    id!: string;
 
     @Column({field: 'category_name', type:DataType.STRING, allowNull: false})
     categoryName!: string;

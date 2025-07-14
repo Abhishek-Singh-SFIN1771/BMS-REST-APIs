@@ -9,10 +9,10 @@ export class Books extends Model<Books>
 
 @PrimaryKey
   @Default(DataType.UUIDV4) // Automatically generates a UUID
-  @Column({ field: 'book_id' })
+  @Column({ field: 'id' })
   id!: string;
 
-  @Column({ type: DataType.STRING, allowNull: false })
+  @Column({ type: DataType.STRING(50), allowNull: false })
   title!: string;
 
   @Column({ field: 'book_isbn', type: DataType.INTEGER, allowNull: false })

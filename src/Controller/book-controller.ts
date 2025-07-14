@@ -5,7 +5,7 @@ import { Service } from "typedi";
 
 
 @Service()
-@JsonController('/api/v1/bms')
+@JsonController('/bms')
 export class BookController 
 {
     private bs: BookService;
@@ -16,7 +16,7 @@ export class BookController
     }
 
     // Create new Books in DB
-    @Post('/addBook')
+    @Post('/book')
     @HttpCode(201)
     addBook(@Body() bookDto: BookDto): Promise<BookDto>
     {
@@ -39,13 +39,13 @@ export class BookController
         return book;    
     }
 
-    @Put('/update/:isbn')
+    @Put('/:isbn')
     async updateBookByIsbn(@Param('isbn') isbn:number, @Body() bookDto:BookDto): Promise<BookDto>
     {
         return this.bs.updateBookByIsbn(isbn , bookDto);
     }
 
-    @Delete('/deleteBook/:isbn')
+    @Delete('/:isbn')
     deleteBook(@Param('isbn') isbn:number): Promise<string>
     {
         return this.bs.deleteBookByIsbn(isbn)

@@ -3,94 +3,79 @@ import { CategoryDto } from "./category-payload";
 
 export class BookDto 
 {
-    private bookId?: string
-    private bookTitle!: string;
-    private bookIsbn!: number;
+    private id?: string;
+    private title!: string;
+    private isbn!: number;
     private publishYear!: number;
     private authorName!: string;
-    private categoryName!:string;
-
-    private author?: AuhtorDto ;
+    private categoryName!: string;
+    private author?: AuhtorDto;
     private category?: CategoryDto;
 
-    // --- Getters/Setters
+    // --- Getters & Setters
 
-    //BookId Getters/Setters
-    public getBookId(): string | undefined
-    {
-        return this.bookId;
+    get bookId(): string | undefined {
+        return this.id;
     }
 
-    public setBookId(value: string) : void
-    {
-        this.bookId = value;
+    set bookId(value: string | undefined) {
+        this.id = value;
     }
 
-    // title Getters/Setters
-    public getBookTitle(): string 
-    {
-        return this.bookTitle;
+    get bookTitle(): string {
+        return this.title;
     }
 
-    public setBookTitle(value: string) : void
-    {
-        this.bookTitle = value;
+    set bookTitle(value: string) {
+        this.title = value;
     }
 
-    // ISBN getters/Setter
-     public getBookIsbn(): number 
-    {
-        return this.bookIsbn;
+    get bookIsbn(): number {
+        return this.isbn;
     }
 
-    public setBookIsbn(value: number) : void
-    {
-        this.bookIsbn = value;
+    set bookIsbn(value: number) {
+        this.isbn = value;
     }
 
-    // Publish Year Getters/Setters
-    public getPublishYear(): number 
-    {
+    get publishYearValue(): number {
         return this.publishYear;
     }
-    public setPublishYear(value: number): void 
-    {
+
+    set publishYearValue(value: number) {
         this.publishYear = value;
     }
 
-    // Author Name Getters/Setters
-    public getAuthorName(): string 
-    {
+    get authorNameValue(): string {
         return this.authorName;
     }
-    public setAuthorName(value: string): void 
-    {
+
+    set authorNameValue(value: string) {
         this.authorName = value;
     }
 
-    // Category Name Getters/Setters 
-    public getCategoryName(): string
-    {
+    get categoryNameValue(): string {
         return this.categoryName;
     }
-    public setCategoryName(value: string): void 
-    {
+
+    set categoryNameValue(value: string) {
         this.categoryName = value;
     }
 
-    // Auhtor Getters/Setters
-    public getAuthor(): AuhtorDto | undefined {
+    get authorDetails(): AuhtorDto | undefined {
         return this.author;
     }
-    public setAuthor(value: AuhtorDto | undefined): void {
+
+    set authorDetails(value: AuhtorDto | undefined) {
         this.author = value;
     }
 
-    // Category Setters/Getters
-    public getCategory(): CategoryDto | undefined {
+    get categoryDetails(): CategoryDto | undefined {
         return this.category;
     }
-    public setCategory(value: CategoryDto | undefined): void {
+
+    set categoryDetails(value: CategoryDto | undefined) {
         this.category = value;
     }
+
 }

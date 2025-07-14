@@ -7,8 +7,8 @@ export class Author extends Model<Author>
 {
     @PrimaryKey
     @Default(DataType.UUIDV4) // Automatically generates a UUID
-    @Column({field: 'author_id'})
-    authorId!: string;
+    @Column({field: 'id'})
+    id!: string;
 
     @Column({field: 'author_name', type:DataType.STRING, allowNull: false})
     authorName!: string;
