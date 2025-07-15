@@ -1,6 +1,6 @@
 import { Model } from "sequelize";
 
-export interface CrudRepository<T extends Model<T> , ID> 
+export interface ICrudRepository<T extends Model<T> , ID> 
 {
   create(data: T): Promise<T>;
 

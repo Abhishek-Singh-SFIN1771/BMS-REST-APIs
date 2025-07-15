@@ -1,4 +1,4 @@
-export interface BookAdapterInterface<Entity, Dto> 
+export interface IBookAdapter<Entity, Dto> 
 {
   entityToDto(model: Entity): Dto;
 

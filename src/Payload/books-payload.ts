@@ -1,5 +1,5 @@
-import { AuhtorDto } from "./author-paylaod";
-import { CategoryDto } from "./category-payload";
+import { AuhtorDto } from "../payload/author-paylaod";
+import { CategoryDto } from "../payload/category-payload";
 
 export class BookDto 
 {

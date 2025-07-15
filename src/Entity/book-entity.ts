@@ -1,6 +1,6 @@
 import { Table, Column, Model, ForeignKey, BelongsTo, DataType, PrimaryKey,  Default } from 'sequelize-typescript';
-import { Author } from "./author-entity";
-import { Category } from "./category-entity";
+import { Author } from "../entity/author-entity";
+import { Category } from "../entity/category-entity";
 
 
 @Table({ tableName: 'books' , timestamps: false, freezeTableName: true})

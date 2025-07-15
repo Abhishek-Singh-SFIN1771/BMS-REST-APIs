@@ -1,16 +1,16 @@
 import { Service } from "typedi";
-import { BookAdapterInterface } from "./book-adapter-interface";
-import { Books } from "../Entity/book-entity";
-import { BookDto } from "../Payload/books-payload";
-import { BookService } from "../Service/book-service";
-import { CategoryService } from "../Service/category-service";
-import { AuthorService } from "../Service/author-service";
-import { AuhtorDto } from "../Payload/author-paylaod";
-import { CategoryDto } from "../Payload/category-payload";
+import { IBookAdapter } from "./book-adapter-interface";
+import { Books } from "../entity/book-entity";
+import { BookDto } from "../payload/books-payload";
+import { BookService } from "../service/book-service";
+import { CategoryService } from "../service/category-service";
+import { AuthorService } from "../service/author-service";
+import { AuhtorDto } from "../payload/author-paylaod";
+import { CategoryDto } from "../payload/category-payload";
 
 
 @Service()
-export class BookAdapter implements BookAdapterInterface<Books , BookDto> 
+export class BookAdapter implements IBookAdapter<Books , BookDto> 
 {
     private bs: BookService;
     private cs: CategoryService;

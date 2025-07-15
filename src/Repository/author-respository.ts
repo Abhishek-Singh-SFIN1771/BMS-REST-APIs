@@ -1,5 +1,5 @@
 import { Service } from "typedi";
-import { Author } from "../Entity/author-entity";
+import { Author } from "../entity/author-entity";
 
 @Service()
 export class AuthorRepository {

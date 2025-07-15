@@ -1,12 +1,12 @@
 import { Service } from "typedi";
-import { Books } from "../Entity/book-entity";
-import { Author } from "../Entity/author-entity";
-import { Category } from "../Entity/category-entity";
-import { CrudRepository } from "./crud-repository-interface";
+import { Books } from "../entity/book-entity";
+import { Author } from "../entity/author-entity";
+import { Category } from "../entity/category-entity";
+import { ICrudRepository } from "../repository/crud-repository-interface";
 
 
 @Service()
-export class BookRepository implements CrudRepository<Books, number>
+export class BookRepository implements ICrudRepository<Books, number>
 {
     async create(data: Books): Promise<Books> 
     {

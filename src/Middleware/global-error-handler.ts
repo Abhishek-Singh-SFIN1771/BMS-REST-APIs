@@ -1,5 +1,5 @@
 import { ExpressErrorMiddlewareInterface, Middleware } from "routing-controllers";
-import { CustomError } from "../Custom-Errors/custom-erros";
+import { CustomError } from "../custom-errors/custom-erros";
 import { Request, Response, NextFunction } from "express";
 import { Service } from "typedi";
 
