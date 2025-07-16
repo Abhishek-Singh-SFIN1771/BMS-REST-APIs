@@ -1,5 +1,5 @@
 import { Default, PrimaryKey } from "sequelize-typescript";
-import { Books } from "./book-entity";
+import { Books } from "../entity/book-entity";
 import { Table, Column, Model, HasMany, DataType } from 'sequelize-typescript';
 
 @Table({tableName: 'authors' , timestamps: false, freezeTableName: true})

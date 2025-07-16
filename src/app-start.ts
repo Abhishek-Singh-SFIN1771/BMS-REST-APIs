@@ -1,7 +1,7 @@
 import { createExpressServer, useContainer } from "routing-controllers";
 import Container from "typedi";
-import { BookController } from "./Controller/book-controller";
-import { GlobalError } from "./Middleware/global-error-handler";
+import { BookController } from "./controller/book-controller";
+import { GlobalError } from "./middleware/global-error-handler";
 
 useContainer(Container);
 

@@ -2,7 +2,6 @@ import { Service } from "typedi";
 import { IBookAdapter } from "./book-adapter-interface";
 import { Books } from "../entity/book-entity";
 import { BookDto } from "../payload/books-payload";
-import { BookService } from "../service/book-service";
 import { CategoryService } from "../service/category-service";
 import { AuthorService } from "../service/author-service";
 import { AuhtorDto } from "../payload/author-paylaod";
@@ -12,13 +11,11 @@ import { CategoryDto } from "../payload/category-payload";
 @Service()
 export class BookAdapter implements IBookAdapter<Books , BookDto> 
 {
-    private bs: BookService;
     private cs: CategoryService;
     private as: AuthorService
 
-    constructor (bookservice: BookService, categoryService: CategoryService , authorService: AuthorService)
+    constructor (categoryService: CategoryService , authorService: AuthorService)
     {
-        this.bs = bookservice;
         this.cs = categoryService
         this.as = authorService
     }
