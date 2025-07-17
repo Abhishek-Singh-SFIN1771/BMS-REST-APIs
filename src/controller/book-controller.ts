@@ -17,7 +17,7 @@ export class BookController
 
     // Create new Books in DB
     @Post('/book')
-    @HttpCode(201)
+    @HttpCode(200)
     addBook(@Body() bookDto: BookDto): Promise<BookDto>
     {
         return this.bs.createBook(bookDto);

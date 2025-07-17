@@ -49,45 +49,4 @@ export class BookRepository implements ICrudRepository<Books, number>
        return await Books.destroy({truncate: true})
     }
 
-
-//     async createBook(book: Books)
-//     {
-//         return await this.create(book);
-//     }
-
-//     async findBooks()
-//     {
-//         return await this.findAll({include: [Author , Category]});
-//     }
-
-//     async findBookById(id: number) 
-//     {
-//         return await Books.findOne({where: {isbn: id} , include: [Author, Category]})
-//     }
-
-//     async updateBookByIsbn(isbn: number , data: Books)
-//     {
-//         const updatePayload = 
-//             {
-//                 bookTitle: data.title,
-//                 bookIsbn: data.isbn,
-//                 publishYear: data.publishYear,
-//                 authorId: data.authorId,
-//                 categoryId: data.categoryId
-//             };
-
-//         const [updatedCount] = await Books.update(updatePayload ,{where: {isbn: isbn}});
-
-//         if (updatedCount === 0) 
-//             {
-//                 throw new Error("❌ Book not found or not updated");
-//             }
-
-//         return await Books.findOne({where:{isbn: data.isbn}, include: [Author , Category]})
-//     }
-
-//     async deleteBook(id: number)
-//     {
-//         return await Books.destroy({where: {isbn : id}})
-//     }
  }
