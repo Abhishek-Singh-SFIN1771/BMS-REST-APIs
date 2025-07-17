@@ -1,5 +1,5 @@
 import { Service } from "typedi";
-import { Category } from "../entity/category-entity";
+import { Category } from "../entit/category-entity";
 
 @Service()
 export class CategoryRepository 

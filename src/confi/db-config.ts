@@ -1,7 +1,7 @@
 const { Sequelize } = require ('sequelize-typescript');
-import { Books } from "../entity/book-entity" ;
-import { Author } from "../entity/author-entity";
-import { Category } from "../entity/category-entity";
+import { Books } from "../entit/book-entity" ;
+import { Author } from "../entit/author-entity";
+import { Category } from "../entit/category-entity";
 
 export const sequelize = new Sequelize (
     {

@@ -1,11 +1,11 @@
 import { Service } from "typedi";
 import { IBookAdapter } from "./book-adapter-interface";
-import { Books } from "../entity/book-entity";
-import { BookDto } from "../payload/books-payload";
-import { CategoryService } from "../service/category-service";
-import { AuthorService } from "../service/author-service";
-import { AuhtorDto } from "../payload/author-paylaod";
-import { CategoryDto } from "../payload/category-payload";
+import { Books } from "../entit/book-entity";
+import { BookDto } from "../payloa/books-payload";
+import { CategoryService } from "../servic/category-service";
+import { AuthorService } from "../servic/author-service";
+import { AuhtorDto } from "../payloa/author-paylaod";
+import { CategoryDto } from "../payloa/category-payload";
 
 
 @Service()

@@ -1,8 +1,8 @@
 import { Service } from "typedi";
-import { BookRepository } from "../repository/book-repository";
-import { BookDto } from "../payload/books-payload";
-import { CustomError } from "../custom-errors/custom-erros";
-import { BookAdapter } from "../adapter/book-adapter";
+import { BookRepository } from "../repositor/book-repository";
+import { BookDto } from "../payloa/books-payload";
+import { CustomError } from "../custom-error/custom-erros";
+import { BookAdapter } from "../adapte/book-adapter";
 
 @Service()
 export class BookService 

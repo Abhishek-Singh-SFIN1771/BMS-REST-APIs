@@ -1,8 +1,8 @@
 import { Service } from "typedi";
-import { Books } from "../entity/book-entity";
-import { Author } from "../entity/author-entity";
-import { Category } from "../entity/category-entity";
-import { ICrudRepository } from "../repository/crud-repository-interface";
+import { Books } from "../entit/book-entity";
+import { Author } from "../entit/author-entity";
+import { Category } from "../entit/category-entity";
+import { ICrudRepository } from "./crud-repository-interface";
 
 
 @Service()

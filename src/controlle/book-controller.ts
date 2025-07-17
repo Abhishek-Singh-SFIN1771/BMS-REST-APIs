@@ -1,6 +1,6 @@
 import { Body, Delete, Get, HttpCode, JsonController, Param, Post, Put } from "routing-controllers";
-import { BookService } from "../service/book-service";
-import { BookDto } from "../payload/books-payload";
+import { BookService } from "../servic/book-service";
+import { BookDto } from "../payloa/books-payload";
 import { Service } from "typedi";
 
 
