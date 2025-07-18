@@ -1,19 +1,49 @@
 import { Service } from "typedi";
 import { Author } from "../entity/author-entity";
+import { ICrudRepository } from "./crud-repository-interface";
 
 @Service()
-export class AuthorRepository {
-
-    async findAuthor(name: string) 
+export class AuthorRepository implements ICrudRepository<Author, string> 
+{
+    async create(data: Author): Promise<Author> 
     {
-        const category = await Author.findOne({ where: { authorName: name } });
-        return category;
+        return await Author.create(data) 
     }
 
-    async createAuthor(data: Author) 
+    async findById(id: string): Promise<Author | null>
     {
-        const category = await Author.create(data)
-        return category
+        return await Author.findOne({where: {id : id}})
+    }
+
+    async findAll(): Promise<Author[]> 
+    {
+        return await Author.findAll();
+    }
+
+    async updateById(id: string, data: Author): Promise<Author | null> 
+    {
+        const [updatedCount] =  await Author.update(data , {where: {id : id}})  
+                
+                
+                if (updatedCount === 0) 
+                    {
+                        throw new Error("❌ Author not found or not updated");
+                    }else 
+                    {
+                        const updatedAuthor = await this.findById(data.id);
+                        return updatedAuthor
+                    }
+         
+    }
+
+    async deleteById(id: string): Promise<number> 
+    {
+        return await Author.destroy({where: {id : id}})
+    }
+
+    async deleteAll(): Promise<number> 
+    {
+        return await Author.destroy({truncate: true});
     }
 
     async findOrCreateAuthor(name: string) 

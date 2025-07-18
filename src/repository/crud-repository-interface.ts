@@ -4,13 +4,13 @@ export interface ICrudRepository<T extends Model<T> , ID>
 {
   create(data: T): Promise<T>;
 
-  findById(id: ID): Promise<T | null>;
+  findById(id: ID | string): Promise<T | null>;
 
   findAll(): Promise<T[]>;
 
-  updateById(id: ID , data: T) : Promise <T | null>
+  updateById(id: ID | string , data: T) : Promise <T | null>
 
-  deleteById(id: ID): Promise<number>;
+  deleteById(id: ID | string): Promise<number>;
 
   deleteAll(): Promise<number>;
 }

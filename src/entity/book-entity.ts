@@ -7,7 +7,7 @@ import { Category } from "./category-entity";
 export class Books extends Model<Books> 
 {
 
-@PrimaryKey
+  @PrimaryKey
   @Default(DataType.UUIDV4) // Automatically generates a UUID
   @Column({ field: 'id' })
   id!: string;
